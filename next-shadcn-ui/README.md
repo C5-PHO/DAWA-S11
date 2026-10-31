@@ -33,7 +33,7 @@ No se requieren variables de entorno ni servicios externos.
 - **Tareas:** CRUD con descripción, proyecto, estado, prioridad, responsable y fecha límite. Incluye búsqueda, filtro por estado y paginación real.
 - **Configuración:** nombre del espacio, correo de contacto, tamaño de página y preferencias simuladas de notificaciones y reporte semanal.
 - **Componentes exigidos:** Spinner durante las operaciones simuladas, Alert para validaciones, Calendar para fechas y Pagination en Tareas.
-- Tema verde esmeralda, diseño adaptable, campos etiquetados y respeto a movimiento reducido.
+- Paleta azul marino y grises neutros, identidad Project Desk, diseño adaptable y respeto a movimiento reducido.
 
 ## Datos y relaciones
 
@@ -52,9 +52,9 @@ Los identificadores son UUID automáticos. Se usa `projectId` para el campo de p
 - `src/lib/dashboard/model.ts`: tipos, datos iniciales y utilidades.
 - `src/components/ui/`: componentes shadcn/ui.
 
-## Evidencias pendientes
+## Despliegue
 
-Tomar capturas reales del resumen, operaciones CRUD, validaciones, calendario, paginación y configuración. El despliegue en Vercel y las conclusiones del documento son entregables separados; este repositorio no los da por realizados.
+Para importar esta aplicación en Vercel, selecciona `next-shadcn-ui` como directorio raíz y Next.js como framework. No requiere variables de entorno. El despliegue y las conclusiones del documento se completan por separado.
 
 ## Capturas de la aplicación
 
