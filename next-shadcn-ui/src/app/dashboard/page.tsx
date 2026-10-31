@@ -1,6 +1,7 @@
 "use client"
 
 import { ProjectForm } from "@/components/ProjectForm"
+import { TasksTable } from "@/components/TasksTable"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -31,6 +32,7 @@ export default function DashboardPage() {
             <TabsTrigger value="overview">Resumen</TabsTrigger>
             <TabsTrigger value="projects">Proyectos</TabsTrigger>
             <TabsTrigger value="team">Equipo</TabsTrigger>
+            <TabsTrigger value="tasks">Tareas</TabsTrigger>
             <TabsTrigger value="settings">Configuración</TabsTrigger>
           </TabsList>
 
@@ -353,6 +355,19 @@ export default function DashboardPage() {
                 <p className="text-muted-foreground">
                   Configuración en desarrollo...
                 </p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="tasks" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Gestión de Tareas</CardTitle>
+                <CardDescription>
+                  Administra todas las tareas de tus proyectos
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <TasksTable />
               </CardContent>
             </Card>
           </TabsContent>
