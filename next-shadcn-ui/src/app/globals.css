@@ -157,3 +157,18 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Acabado visual del panel */
+body { letter-spacing: -0.01em; }
+header.border-b.bg-card { border-bottom-color: oklch(0.88 0.018 160); box-shadow: 0 1px 8px oklch(0.28 0.04 160 / 0.05); }
+main h1 { color: oklch(0.23 0.042 164); letter-spacing: -0.035em; }
+main h2 { color: oklch(0.27 0.047 164); letter-spacing: -0.025em; }
+[data-slot="tabs-list"] { background: oklch(0.95 0.012 160); border: 1px solid oklch(0.91 0.015 160); padding: 0.35rem; }
+[data-slot="tabs-trigger"] { padding: 0.55rem 0.95rem; transition: background-color 150ms ease, color 150ms ease; }
+[data-slot="tabs-trigger"][data-state="active"] { color: oklch(0.36 0.1 155); box-shadow: 0 1px 3px oklch(0.25 0.04 160 / 0.14); }
+[data-slot="card"] { border-color: oklch(0.91 0.014 160); box-shadow: 0 2px 7px oklch(0.28 0.04 160 / 0.04); }
+[data-slot="card-title"] { letter-spacing: -0.02em; }
+[data-slot="table-header"] { background: oklch(0.97 0.01 160); }
+[data-slot="table-head"] { font-weight: 600; }
+[data-slot="dialog-content"], [data-slot="alert-dialog-content"] { box-shadow: 0 18px 60px oklch(0.2 0.035 160 / 0.18); }
+@media (prefers-reduced-motion: reduce) { [data-slot="tabs-trigger"] { transition: none; } }
