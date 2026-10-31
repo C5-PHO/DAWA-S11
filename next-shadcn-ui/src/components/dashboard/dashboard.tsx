@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, LayoutDashboard } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -142,7 +143,7 @@ export function Dashboard() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-8">
           <div className="flex items-center gap-3">
             <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <LayoutDashboard className="size-5" />
+              <Image src="/project-desk.svg" alt="" width={40} height={40} priority />
             </div>
             <div>
               <p className="text-xs font-semibold tracking-[0.18em] text-primary">
