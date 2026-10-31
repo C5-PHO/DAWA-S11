@@ -172,3 +172,45 @@ main h2 { color: oklch(0.27 0.047 164); letter-spacing: -0.025em; }
 [data-slot="table-head"] { font-weight: 600; }
 [data-slot="dialog-content"], [data-slot="alert-dialog-content"] { box-shadow: 0 18px 60px oklch(0.2 0.035 160 / 0.18); }
 @media (prefers-reduced-motion: reduce) { [data-slot="tabs-trigger"] { transition: none; } }
+
+/* Identidad profesional: azul petróleo, tinta y superficies neutras. */
+:root {
+  --background: #f3f5f8;
+  --foreground: #172b45;
+  --primary: #176b83;
+  --primary-foreground: #ffffff;
+  --muted: #edf1f6;
+  --muted-foreground: #5e6d80;
+  --secondary: #eaf0f5;
+  --secondary-foreground: #29415c;
+  --accent: #e6f1f5;
+  --accent-foreground: #155c73;
+  --border: #dce3ec;
+  --input: #d3dde8;
+  --ring: #2789a5;
+  --radius: 0.5rem;
+}
+body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+header.border-b.bg-card { background: #152c45; color: #fff; border-color: #253f5a; box-shadow: none; }
+header p.text-primary { color: #82cee0; }
+header [data-slot="badge"] { color: #dbeaf2; border-color: #426078; background: #203b54; }
+main { padding-top: 2.5rem; padding-bottom: 3rem; }
+main h1 { color: #152c45; font-weight: 700; letter-spacing: -0.04em; }
+main h2 { color: #152c45; font-weight: 650; }
+[data-slot="tabs-list"] { background: #e6ecf2; border: 1px solid #d8e1eb; border-radius: 0.6rem; gap: 0.25rem; }
+[data-slot="tabs-trigger"] { color: #50647b; padding: 0.65rem 1.15rem; border-radius: 0.4rem; font-weight: 600; }
+[data-slot="tabs-trigger"][data-state="active"] { background: #fff; color: #155c73; box-shadow: 0 2px 5px #152c4510; }
+[data-slot="card"] { background: #fff; border: 1px solid #dce3ec; border-radius: 0.65rem; box-shadow: 0 3px 12px #152c4506; }
+[data-slot="card-header"] { padding: 1.35rem 1.35rem 0.8rem; }
+[data-slot="card-content"] { padding-left: 1.35rem; padding-right: 1.35rem; padding-bottom: 1.35rem; }
+[data-slot="card-title"] { color: #213a54; font-weight: 650; }
+[data-slot="button"] { font-weight: 600; border-radius: 0.4rem; min-height: 2.2rem; }
+[data-slot="badge"] { border-radius: 0.3rem; font-weight: 600; }
+[data-slot="table-header"] { background: #eaf0f6; }
+[data-slot="table-head"] { height: 3rem; color: #455a72; font-size: 0.75rem; letter-spacing: 0.025em; }
+[data-slot="table-cell"] { padding-top: 1rem; padding-bottom: 1rem; }
+[data-slot="input"], [data-slot="select-trigger"] { min-height: 2.6rem; background: #fff; border-radius: 0.4rem; }
+[data-slot="dialog-content"], [data-slot="alert-dialog-content"] { border: 1px solid #dce3ec; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 25px 80px #10243c35; }
+[data-slot="popover-content"] { background: #fff; }
+.section-heading { padding-bottom: 0.4rem; }
+@media (max-width: 640px) { main { padding-top: 1.75rem; } [data-slot="tabs-trigger"] { padding: 0.6rem 0.8rem; } }
