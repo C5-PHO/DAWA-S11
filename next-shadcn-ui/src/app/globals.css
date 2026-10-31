@@ -214,3 +214,28 @@ main h2 { color: #152c45; font-weight: 650; }
 [data-slot="popover-content"] { background: #fff; }
 .section-heading { padding-bottom: 0.4rem; }
 @media (max-width: 640px) { main { padding-top: 1.75rem; } [data-slot="tabs-trigger"] { padding: 0.6rem 0.8rem; } }
+
+/* Paleta institucional sobria */
+:root {
+  --background: #f5f6f8;
+  --foreground: #202b3b;
+  --primary: #253a57;
+  --primary-foreground: #ffffff;
+  --muted: #f0f2f5;
+  --muted-foreground: #647184;
+  --secondary: #eef1f5;
+  --secondary-foreground: #34445b;
+  --accent: #edf1f6;
+  --accent-foreground: #253a57;
+  --border: #dfe4ea;
+  --input: #d5dce5;
+  --ring: #60748f;
+}
+header.border-b.bg-card { background: #ffffff; color: #253a57; border-color: #dfe4ea; }
+header p.text-primary { color: #344c6b; }
+header [data-slot="badge"] { color: #536176; border-color: #dce2e9; background: #f7f8fa; }
+main h1, main h2 { color: #202e42; }
+[data-slot="tabs-list"] { background: #e9edf2; border-color: #dce2e9; }
+[data-slot="tabs-trigger"][data-state="active"] { color: #253a57; }
+[data-slot="card"] { border-color: #e0e5eb; box-shadow: 0 2px 8px #1c2d4208; }
+[data-slot="table-header"] { background: #f1f3f6; }
