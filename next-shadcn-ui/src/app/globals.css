@@ -129,3 +129,31 @@
     @apply font-sans;
   }
 }
+
+/* Tema de la tarea: verde esmeralda sobre fondos claros. */
+:root {
+  --background: oklch(0.982 0.005 160);
+  --primary: oklch(0.448 0.119 151.328);
+  --primary-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.596 0.145 163.225);
+  --accent: oklch(0.962 0.025 160);
+  --accent-foreground: oklch(0.35 0.08 160);
+  --radius: 0.4rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
