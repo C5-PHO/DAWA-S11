@@ -55,3 +55,16 @@ Los identificadores son UUID automáticos. Se usa `projectId` para el campo de p
 ## Evidencias pendientes
 
 Tomar capturas reales del resumen, operaciones CRUD, validaciones, calendario, paginación y configuración. El despliegue en Vercel y las conclusiones del documento son entregables separados; este repositorio no los da por realizados.
+
+## Capturas de la aplicación
+
+Las imágenes muestran las pantallas con datos de demostración.
+
+![Resumen](docs/capturas/01-resumen.png)
+![Proyectos](docs/capturas/02-proyectos.png)
+![Equipo](docs/capturas/03-equipo.png)
+![Tareas](docs/capturas/04-tareas.png)
+![Configuración](docs/capturas/05-configuracion.png)
+![Formulario de proyecto](docs/capturas/06-formulario-proyecto.png)
+![Validación](docs/capturas/07-validacion.png)
+![Calendario](docs/capturas/08-calendario.png)
