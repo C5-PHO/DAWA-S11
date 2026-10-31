@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard de Proyectos — DAWA, Semana 11
 
-## Getting Started
+Aplicación Next.js del ejercicio 2 y la tarea final del GLAB: gestión de proyectos, miembros y tareas con componentes reutilizables de shadcn/ui.
 
-First, run the development server:
+## Tecnologías
 
-```bash
+Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui basado en Radix, React Day Picker y date-fns.
+
+## Ejecución local
+
+Desde esta carpeta:
+
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir `http://localhost:3000/dashboard`. La raíz redirige al dashboard. Si el puerto está ocupado, usar la dirección que indique Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run lint
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No se requieren variables de entorno ni servicios externos.
 
-## Learn More
+## Funciones
 
-To learn more about Next.js, take a look at the following resources:
+- **Resumen:** métricas calculadas con los datos actuales, distribución de tareas y actividad de la sesión.
+- **Proyectos:** creación, lectura, edición, detalles, selección de miembros y eliminación confirmada.
+- **Equipo:** CRUD con identificador automático, rol, nombre, correo único, cargo, nacimiento, teléfono, proyecto y estado activo.
+- **Tareas:** CRUD con descripción, proyecto, estado, prioridad, responsable y fecha límite. Incluye búsqueda, filtro por estado y paginación real.
+- **Configuración:** nombre del espacio, correo de contacto, tamaño de página y preferencias simuladas de notificaciones y reporte semanal.
+- **Componentes exigidos:** Spinner durante las operaciones simuladas, Alert para validaciones, Calendar para fechas y Pagination en Tareas.
+- Tema verde esmeralda, diseño adaptable, campos etiquetados y respeto a movimiento reducido.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Datos y relaciones
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Los datos iniciales son de demostración y se mantienen en memoria durante la sesión. Recargar la página los restablece; no existe persistencia ni backend. Las operaciones simulan una espera de 650 ms y bloquean el envío repetido.
 
-## Deploy on Vercel
+Cada miembro puede pertenecer a un proyecto. Asignarlo desde otro proyecto lo reasigna; las tareas incompatibles quedan sin responsable. Solo los miembros activos del proyecto pueden recibir tareas nuevas. Desactivar, cambiar de proyecto o eliminar un miembro libera sus asignaciones afectadas. Eliminar un proyecto elimina sus tareas y deja a sus miembros sin proyecto; el diálogo informa este efecto antes de confirmar.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Los identificadores son UUID automáticos. Se usa `projectId` para el campo de proyecto y `dateline` para la fecha límite de la tarea, corrigiendo el error tipográfico `prjectId` de la guía.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estructura
+
+- `src/app/dashboard/page.tsx`: entrada de la ruta.
+- `src/components/dashboard/dashboard.tsx`: estado compartido y operaciones en memoria.
+- `src/components/dashboard/*-panel.tsx`: interfaces de cada sección.
+- `src/components/dashboard/shared.tsx`: validaciones visuales, campos, calendario y confirmación de borrado.
+- `src/lib/dashboard/model.ts`: tipos, datos iniciales y utilidades.
+- `src/components/ui/`: componentes shadcn/ui.
+
+## Evidencias pendientes
+
+Tomar capturas reales del resumen, operaciones CRUD, validaciones, calendario, paginación y configuración. El despliegue en Vercel y las conclusiones del documento son entregables separados; este repositorio no los da por realizados.
